@@ -2,8 +2,8 @@
 
 Welcome to the WordPress development repository! Please check out the [contributor handbook](https://make.wordpress.org/core/handbook/) for information about how to open bug reports, contribute patches, test changes, write documentation, or get involved in any way you can.
 
-* [Getting Started](#getting-started)
-* [Credentials](#credentials)
+-   [Getting Started](#getting-started)
+-   [Credentials](#credentials)
 
 ## Getting Started
 
@@ -15,9 +15,9 @@ You will need a basic understanding of how to use the command line on your compu
 
 You will need Node and npm installed on your computer. Node is a JavaScript runtime used for developer tooling, and npm is the package manager included with Node. If you have a package manager installed for your operating system, setup can be as straightforward as:
 
-* macOS: `brew install node`
-* Windows: `choco install nodejs`
-* Ubuntu: `apt install nodejs npm`
+-   macOS: `brew install node`
+-   Windows: `choco install nodejs`
+-   Ubuntu: `apt install nodejs npm`
 
 If you are not using a package manager, see the [Node.js download page](https://nodejs.org/en/download/) for installers and binaries.
 
@@ -35,15 +35,16 @@ Ensure your container environment is running before using these commands.
 
 You can get started using the local development environment with these steps:
 
-1. Go to https://github.com/WordPress/wordpress-develop and fork the repository to your own GitHub account. 
+1. Go to https://github.com/WordPress/wordpress-develop and fork the repository to your own GitHub account.
 1. Then clone the forked repository to your computer using `git clone https://github.com/<your-username>/wordpress-develop.git`.
 1. Navigate into the directory for the cloned repository using `cd wordpress-develop`.
 1. Add the origin repo as an `upstream` remote via `git remote add upstream https://github.com/WordPress/wordpress-develop.git`.
 1. Then you can keep your branches up to date via `git pull --ff upstream/trunk`, for example.
 
 Alternatively, if you have the [GitHub CLI](https://cli.github.com/) installed, you can simply run `gh repo fork WordPress/wordpress-develop --clone --remote` ([docs](https://cli.github.com/manual/gh_repo_fork)). This command will:
+
 1. Fork the repository to your account (use the `--org` flag to clone into an organization).
-1. Clone the repository to your machine. 
+1. Clone the repository to your machine.
 1. Add `WordPress/wordpress-develop` as `upstream` and set it to the default `remote` repository
 
 After this, remember to run `cd wordpress-develop`.
@@ -98,9 +99,10 @@ npm run test:php -- --group <group name or ticket number>
 ```
 
 #### Generating a code coverage report
+
 PHP code coverage reports are [generated daily](https://github.com/WordPress/wordpress-develop/actions/workflows/test-coverage.yml) and [submitted to Codecov.io](https://app.codecov.io/gh/WordPress/wordpress-develop).
 
-After the local container environment has [been installed and started](#to-start-the-development-environment-for-the-first-time), the following command can be used to generate a code coverage report. 
+After the local container environment has [been installed and started](#to-start-the-development-environment-for-the-first-time), the following command can be used to generate a code coverage report.
 
 ```
 npm run test:coverage
@@ -146,8 +148,8 @@ npm run env:reset
 
 Older MySQL and MariaDB container images do not support Apple Silicon processors (M1, M2, etc.). This is true for:
 
-- MySQL versions 5.7 and earlier
-- MariaDB 5.5
+-   MySQL versions 5.7 and earlier
+-   MariaDB 5.5
 
 When using these versions on an Apple Silicon machine, you must create a `docker-compose.override.yml` file with the following contents:
 
@@ -164,14 +166,14 @@ Additionally, the "Use Rosetta for x86/AMD64 emulation on Apple Silicon" setting
 
 These are the default environment credentials:
 
-* Database Name: `wordpress_develop`
-* Username: `root`
-* Password: `password`
+-   Database Name: `wordpress_develop`
+-   Username: `root`
+-   Password: `password`
 
 To login to the site, navigate to http://localhost:8889/wp-admin.
 
-* Username: `admin`
-* Password: `password`
+-   Username: `admin`
+-   Password: `password`
 
 **Note:** With Codespaces, open the portforwarded URL from the ports tab in the terminal, and append `/wp-admin` to login to the site.
 
